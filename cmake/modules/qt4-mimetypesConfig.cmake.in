@@ -1,0 +1,26 @@
+# - Try to find qt4-mimetypes
+# Once done this will define
+#  QT4-MIMETYPES_FOUND - qt4-mimetypes library was found
+#  QT4-MIMETYPES_INCLUDE_DIRS - The qt4-mimetypes include directories
+#  QT4-MIMETYPES_LIBRARIES - The libraries needed to use qt4-mimetypes
+
+# Compute paths
+get_filename_component(QT4-MIMETYPES_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+if(EXISTS "${QT4-MIMETYPES_CMAKE_DIR}/CMakeCache.txt")
+  # in build tree
+  include("${QT4-MIMETYPES_CMAKE_DIR}/qt4-mimetypesBuildTreeSettings.cmake")
+else()
+  set(QT4-MIMETYPES_INCLUDE_DIRS "@CMAKE_INSTALL_INCLUDEDIR@")
+endif()
+
+# Our library dependencies (contains definitions for IMPORTED targets)
+include("${QT4-MIMETYPES_CMAKE_DIR}/qt4-mimetypesLibraryDepends.cmake")
+
+# These are IMPORTED targets created by FooBarLibraryDepends.cmake
+set(QT4-MIMETYPES_LIBRARIES "qt4-mimetypes")
+
+set(QT4-MIMETYPES_FOUND TRUE)
+
+if(qt4-mimetypes_FIND_REQUIRED)
+  message(STATUS "Found qt4-mimetypes library")
+endif()

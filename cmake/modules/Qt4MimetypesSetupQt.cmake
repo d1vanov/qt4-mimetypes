@@ -1,0 +1,3 @@
+find_package(Qt4 COMPONENTS QTCORE REQUIRED)
+find_package(Qt4 QUIET COMPONENTS QTTEST)
+include(${QT_USE_FILE})
