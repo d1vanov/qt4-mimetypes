@@ -20,7 +20,3 @@ include("${QT4-MIMETYPES_CMAKE_DIR}/qt4-mimetypesLibraryDepends.cmake")
 set(QT4-MIMETYPES_LIBRARIES "qt4-mimetypes")
 
 set(QT4-MIMETYPES_FOUND TRUE)
-
-if(qt4-mimetypes_FIND_REQUIRED)
-  message(STATUS "Found qt4-mimetypes library")
-endif()
